@@ -51,6 +51,18 @@ class SecondFragment : Fragment() {
                 }
             )
         }
+        view.findViewById<Button>(R.id.toFourth).setOnClickListener {
+            findNavController().navigate(
+                R.id.action_secondFragment_to_fourthFragment,
+                null,
+                navOptions {
+                    anim {
+                        enter = R.anim.slide_out
+                        exit = R.anim.fade_out
+                    }
+                }
+            )
+        }
         return view
     }
 

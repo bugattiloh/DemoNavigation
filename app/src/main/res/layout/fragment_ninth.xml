@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context=".NinthFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -16,13 +16,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/first_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/go_to_second"
-        app:layout_constraintTop_toBottomOf="@id/first_text" />
-
-    <Button
         android:id="@+id/toSeventh1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,7 +23,7 @@
         android:layout_marginTop="420dp"
         android:layout_marginEnd="259dp"
         android:layout_marginBottom="263dp"
-        android:text="3"
+        android:text="7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

@@ -16,10 +16,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [FirstFragment.newInstance] factory method to
+ * Use the [SeventhFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class FirstFragment : Fragment() {
+class SeventhFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -37,11 +37,11 @@ class FirstFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_first, container, false)
-        val button = view.findViewById<Button>(R.id.first_button)
+        val view = inflater.inflate(R.layout.fragment_seventh, container, false)
+        val button = view.findViewById<Button>(R.id.toSecond)
         button.setOnClickListener {
             findNavController().navigate(
-                R.id.action_firstFragment_to_secondFragment2,
+                R.id.action_seventhFragment_to_fifthFragment,
                 null,
                 navOptions {
                     anim {
@@ -51,9 +51,9 @@ class FirstFragment : Fragment() {
                 }
             )
         }
-         view.findViewById<Button>(R.id.toSeventh1).setOnClickListener {
+        view.findViewById<Button>(R.id.toSixth).setOnClickListener {
             findNavController().navigate(
-                R.id.action_firstFragment_to_thirdFragment,
+                R.id.action_seventhFragment_to_ninthFragment,
                 null,
                 navOptions {
                     anim {
@@ -66,12 +66,6 @@ class FirstFragment : Fragment() {
         return view
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-    }
-
-
     companion object {
         /**
          * Use this factory method to create a new instance of
@@ -79,12 +73,12 @@ class FirstFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment FirstFragment.
+         * @return A new instance of fragment SeventhFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            FirstFragment().apply {
+            SeventhFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
