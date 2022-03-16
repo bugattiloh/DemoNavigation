@@ -18,40 +18,42 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav)
-//        bottomNavigationView.setupWithNavController(navController)
-//
+
+        bottomNavigationView.setupWithNavController(navController)
+
 //        appBarConfiguration = AppBarConfiguration(
 //            setOf(R.id.firstFragment, R.id.secondFragment)
 //        )
-//
+
 //        setupActionBarWithNavController(navController, appBarConfiguration)
-//
 
 
-        bottomNavigationView.setOnItemSelectedListener {
-            when(it.itemId) {
-                R.id.action_firstFragment -> {
-                    navController.navigate(R.id.action_secondFragment_to_firstFragment)
-                    return@setOnItemSelectedListener true
-                }
-                R.id.action_secondFragment -> {
-                    navController.navigate(R.id.action_firstFragment_to_secondFragment2)
-                    return@setOnItemSelectedListener true
-                }
-                else -> {
-                    return@setOnItemSelectedListener false
-                }
-            }
-        }
+
+//        bottomNavigationView.setOnItemSelectedListener {
+//            when(it.itemId) {
+//                R.id.action_firstFragment -> {
+//                    navController.navigate(R.id.action_secondFragment_to_firstFragment)
+//                    return@setOnItemSelectedListener true
+//                }
+//                R.id.action_secondFragment -> {
+//                    navController.navigate(R.id.action_firstFragment_to_secondFragment2)
+//                    return@setOnItemSelectedListener true
+//                }
+//                else -> {
+//                    return@setOnItemSelectedListener false
+//                }
+//            }
+//        }
 
 
     }
 
-//    override fun onSupportNavigateUp(): Boolean {
-//        return navController.navigateUp(appBarConfiguration)
-//    }
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp(appBarConfiguration)
+    }
 }
